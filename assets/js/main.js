@@ -27,8 +27,8 @@ const app  = {
       let i=bomba[0];
       let j=bomba[2];
       $(this).append(app.array[i][j]);
-      if(bomba == " "){
-        
+      if(app.array[i][j] == '*'){
+        alert('peligro!!!!');
       }
    },
 
