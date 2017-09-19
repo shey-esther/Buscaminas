@@ -1,19 +1,24 @@
 // aqui el codigo js
 // 'use strict'
 const app  = {
+
+    item : {
+    imgsrc : 'assets/img/bambi.gif',
+    },
+
     init : function () {
           app.dibujoHtml();//dibujara el HTML desde js.
           app.configuracion();
       },
-    
+
     array : [
-      '  12*12',
-      '121  *1',
-      '1 *21 1',
-      '12 *121',
-      '121*  1',
-      '  *12 2',
-      '1212 *1'
+      '  12.12',
+      '121  .1',
+      '1 .21 1',
+      '12 .121',
+      '121.  1',
+      '  .12 2',
+      '1212 .1'
     ],
 
     configuracion : function () {
@@ -27,8 +32,12 @@ const app  = {
       let i=bomba[0];
       let j=bomba[2];
       $(this).append(app.array[i][j]);
-      if(app.array[i][j] == '*'){
+      if(app.array[i][j] == '.'){
+        $(this).empty();
+        $(this).append(`<img class="bomba" src='${app.item.imgsrc}'/>`);
         alert('peligro!!!!');
+      }else if(app.array[i][j] == "."){
+
       }
    },
 
